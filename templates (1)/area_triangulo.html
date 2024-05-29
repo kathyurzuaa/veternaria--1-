@@ -1,0 +1,66 @@
+{%extends "layout.html"%}
+{% block content%}
+
+<header>
+   <img src="static/imagenes/fondoo.jpg" width="200px">
+</header>
+
+
+    
+<section class="main" >
+    
+<section class="articles">
+        <article>
+            <h2> area_triangulo  </h2>
+            <br>
+            <p>¡Calcula el area del triangulo que deses !
+
+            
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Calcular Área de Triángulo</title>
+                    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+                </head>
+                <body style="background-image: url('{{ url_for('static', filename='images/background.jpg') }}');">
+                    <div class="container">
+                        <h1>Calcular Área de Triángulo</h1>
+                        <form method="POST">
+                            <label for="base">Base:</label>
+                            <input type="number" id="base" name="base" required>
+                            <label for="altura">Altura:</label>
+                            <input type="number" id="altura" name="altura" required>
+                            <button type="submit">Calcular Área</button>
+                        </form>
+                        {% if area %}
+                            <p>El área del triángulo es: {{ area }}</p>
+                            
+                        {% endif %}
+                    </div>
+                </body>
+                </html>
+                
+
+
+            
+                /p>
+        
+        </article>
+</section>  
+</section> 
+<aside>
+    <h3> Avisos:</h3>
+    <p> EL HORARIO DE LNES A VIERNES 9AM A 10PM
+        HORARIO DE SABADO Y DOMINGO 8AM A 11PM
+        <br>
+        
+       
+    </p>
+      
+</aside>
+    
+  
+  
+{%endblock%}
